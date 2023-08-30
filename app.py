@@ -54,6 +54,10 @@ def upload_to_supabase(file_contents, file_name):
         st.error("File upload failed.")
         st.title(response.status_code)
         print(response.text)  # エラーメッセージの表示
+        if response.status_code == 400:
+            error_message = response.text  # エラーメッセージを取得
+            print("Error:", error_message)
+
 
 
 def main():
