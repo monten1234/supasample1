@@ -39,7 +39,8 @@ from supabase import create_client, Client
 # Supabase URLとAPIキーを環境変数から取得
 url = os.environ.get("SUPABASE_URL")
 key = os.environ.get("SUPABASE_KEY")
-
+print(url)
+print(key)
 # Supabaseクライアントを作成
 supabase = create_client(url, key)
 
