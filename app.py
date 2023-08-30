@@ -53,7 +53,8 @@ def upload_to_supabase(file_contents, file_name):
     else:
         st.error("File upload failed.")
         st.title(response.status_code)
-        print(headers)
+        print(response.text)  # エラーメッセージの表示
+
 
 def main():
     st.title("Supabase Storage Uploader")
