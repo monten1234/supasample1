@@ -37,8 +37,8 @@ import os
 from supabase import create_client, Client
 
 # Supabase URLとAPIキーを環境変数から取得
-url = os.environ.get("SUPABASE_TEST_URL")
-key = os.environ.get("SUPABASE_TEST_KEY")
+url = os.environ.get("SUPABASE_URL")
+key = os.environ.get("SUPABASE_KEY")
 
 # Supabaseクライアントを作成
 supabase = create_client(url, key)
