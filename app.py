@@ -45,10 +45,8 @@ supabase: Client = create_client(url, key)
 # Streamlitアプリの設定
 st.title("Supabase Storage Uploader")
 st.write("Upload a file to Supabase Storage")
-
 # ファイルアップロードのインターフェース
 file = st.file_uploader("Choose a file", type=["png", "jpg", "jpeg", "xlsx"])
-
 if file:
     st.write("File selected:", file.name)
 
