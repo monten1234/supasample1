@@ -57,7 +57,7 @@ if file:
     upload_result = supabase.storage.from_(bucket_name).upload(object_name, new_file)
 
     if upload_result:
-        get_url = supabase.storage.from_(bucket_name).get_public_url(file.name)
+        get_url = supabase.storage.from_(bucket_name).get_public_url(object_name)
         print(get_url)
         st.success("File uploaded successfully!")
     else:
