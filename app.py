@@ -55,8 +55,8 @@ if file:
     st.write("File selected:", file.name)
 
     # ファイルのアップロード
-    bucket_name = "sumple2"
-    object_name = f"sumple2/{file.name}"
+    # bucket_name = "sumple2"
+    object_name = f"/sumple2/{file.name}"
     new_file = file.read()  # アップロードするファイルのバイナリデータ
     upload_result = supabase.storage.from_(bucket_name).upload(object_name, new_file)
 
