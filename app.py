@@ -58,7 +58,7 @@ if file:
     bucket_name = "sumple2"
     object_name = f"/sumple2/{file.name}"
     new_file = file.read()  # アップロードするファイルのバイナリデータ
-    upload_result = supabase.storage.from_(bucket_name).upload(object_name, new_file)
+    upload_result = supabase.storage.from_(bucket_name).upload(bucket_name, new_file)
 
     if upload_result:
         st.success("File uploaded successfully!")
