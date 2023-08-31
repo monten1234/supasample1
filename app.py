@@ -42,7 +42,7 @@ key = os.environ.get("SUPABASE_KEY")
 print(url)
 print(key)
 # Supabaseクライアントを作成
-supabase = create_client(url, key)
+Client = create_client(url, key)
 
 # Streamlitアプリの設定
 st.title("Supabase Storage Uploader")
@@ -57,7 +57,7 @@ if file:
     # ファイルのアップロード
     bucket_name = "photos"
     new_file = file.read()  # アップロードするファイルのバイナリデータ
-    upload_result = supabase.storage.from_(bucket_name).upload(file.name, new_file)
+    upload_result = Client.storage.from_(bucket_name).upload(file.name, new_file)
 
     if upload_result:
         st.success("File uploaded successfully!")
