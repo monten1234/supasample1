@@ -51,7 +51,8 @@ if file:
 
     # ファイルのアップロード
     bucket_name = "sumple2"
-    object_name = f"/aaa/{file.name}"
+    object_name = f"aaa/{file.name}"
+    # urllib.parse.urljoin('aaa','')
     new_file = file.read()  # アップロードするファイルのバイナリデータ
     upload_result = supabase.storage.from_(bucket_name).upload(object_name, new_file)
 
