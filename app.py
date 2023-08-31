@@ -58,8 +58,8 @@ if file:
 
     if upload_result:
         get_url = supabase.storage.from_(bucket_name).get_public_url(file.name)
+        print(get_url)
         st.success("File uploaded successfully!")
     else:
         st.error("File upload failed.")
-if get_url:
-    st.title(get_url)
+
