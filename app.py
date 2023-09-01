@@ -62,5 +62,3 @@ if file:
         st.success("File uploaded successfully!")
     else:
         st.error("File upload failed.")
-if get_url:
-    print(get_url)
